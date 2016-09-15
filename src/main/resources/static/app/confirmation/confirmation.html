@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-4 col-md-offset-4">
+            <md-card>
+                <md-card-content>
+                    <div class="col-md-12">
+                        Dear, <span>{{customer}}</span> your selections are
+                    </div>
+                    <div class="col-md-12" style="margin-top: 20px;">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <td><b>#</b></td>
+                                <td><b>Selections</b></td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="selection in selections track by $index">
+                                <td>{{$index+1}}</td>
+                                <td>{{selection}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <md-button>Confirm</md-button>
+                    </div>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Selection</title>
+    <link rel="stylesheet" href="vendor/angular-material.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+</head>
+<body ng-app="sps" ng-strict-di>
+<div ui-view="navbar"></div>
+<div ui-view="content"></div>
+
+<!--vendor-->
+<script src="vendor/jquery.min.js"></script>
+<script src="vendor/angular.js"></script>
+<script src="vendor/angular-resource.js"></script>
+<script src="vendor/angular-aria.min.js"></script>
+<script src="vendor/angular-animate.min.js"></script>
+<script src="vendor/angular-cookies.min.js"></script>
+<script src="vendor/bootstrap.min.js"></script>
+<script src="vendor/angular-material.min.js"></script>
+<script src="vendor/angular-ui-router.js"></script>
+<!--end-vendor-->
+
+<script src="app/app.module.js"></script>
+<script src="app/app.state.js"></script>
+<script src="./app/home/product.selection.controller.js"></script>
+<script src="./app/home/product.selection.state.js"></script>
+<script src="./app/home/product.selection.service.js"></script>
+<script src="./app/confirmation/confirmation.state.js"></script>
+<script src="./app/confirmation/confirmation.controller.js"></script>
+<script src="./app/navbar/navbar.controller.js"></script>
+
+</body>
+</html>

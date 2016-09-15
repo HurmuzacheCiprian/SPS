@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-12" ng-if="locationError">
+        <div class="col-md-4">
+            <div class="alert alert-warning">{{errorMessage}}</div>
+        </div>
+    </div>
+    <div class="col-md-12" ng-if="!locationError">
+        <div class="col-md-4" ng-repeat="c in catalogue">
+            <md-card>
+                <md-card-title>{{c.categoryName}}</md-card-title>
+                <md-card-content>
+                    <div ng-repeat="product in c.products">
+                        <md-checkbox ng-click="addToSelection(product)" aria-label="Select product"></md-checkbox>
+                        <span>{{product}}</span>
+                    </div>
+
+                </md-card-content>
+            </md-card>
+        </div>
+        <div class="col-md-4">
+            <md-card>
+                <md-card-title>Your selections</md-card-title>
+                <md-card-content>
+                    <div ng-repeat="selection in selections">
+                        - {{selection}}
+                    </div>
+                    <md-button ng-click="goToConfirmationPage()">CHECKOUT</md-button>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+</div>
