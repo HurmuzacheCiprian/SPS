@@ -18,7 +18,7 @@ public class CatalogueResource {
 
     @RequestMapping(value = "/products", method = RequestMethod.GET)
     public ResponseEntity getProducts(@RequestParam(value = "locationID", required = false) String locationId) {
-        return new ResponseEntity<>(catalogueService.getProducts(locationId), HttpStatus.OK);
+        return new ResponseEntity<>(catalogueService.getCatalogue(locationId), HttpStatus.OK);
     }
 
 }

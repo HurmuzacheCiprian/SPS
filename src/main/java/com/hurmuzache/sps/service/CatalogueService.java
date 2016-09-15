@@ -16,7 +16,7 @@ public class CatalogueService {
     private final List<String> defaultProducts = Arrays.asList("Sky News", "Sky Sports News");
 
 
-    public CatalogueDto getProducts(String locationId) {
+    public CatalogueDto getCatalogue(String locationId) {
         Location location = Location.getLocationByIdentifier(locationId);
         return CatalogueDto.builder().catalogueOfProducts(getProductsForCategoryAndLocation(location)).build();
     }

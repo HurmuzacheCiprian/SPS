@@ -21,25 +21,25 @@ public class CatalogueServiceTest {
 
     @Test
     public void shouldAlwaysGetOnlyTheNewsProductsWhenLocationIsInvalid() {
-        CatalogueDto catalogue = catalogueService.getProducts("fake");
+        CatalogueDto catalogue = catalogueService.getCatalogue("fake");
         checkDefaultCatalogueResponse(catalogue);
     }
 
     @Test
     public void shouldAlwaysReturnTheNewsListForInvalidLocation() {
-        CatalogueDto catalogue = catalogueService.getProducts("");
+        CatalogueDto catalogue = catalogueService.getCatalogue("");
         checkDefaultCatalogueResponse(catalogue);
     }
 
     @Test
     public void shouldAlwaysReturnTheNewsListForNullLocation() {
-        CatalogueDto catalogue = catalogueService.getProducts(null);
+        CatalogueDto catalogue = catalogueService.getCatalogue(null);
         checkDefaultCatalogueResponse(catalogue);
     }
 
     @Test
     public void shouldGetListWithSportsAndNewsForLondonIdentifierLocation() {
-        CatalogueDto catalogue = catalogueService.getProducts("London-Identifier");
+        CatalogueDto catalogue = catalogueService.getCatalogue("London-Identifier");
         checkCatalogueResponse(catalogue);
         List<ProductDto> products = catalogue.getCatalogueOfProducts();
         Assert.isTrue(products.get(0).getProducts().size() == 2);
@@ -52,7 +52,7 @@ public class CatalogueServiceTest {
 
     @Test
     public void shouldGetListWithSportsAndNewsForLiverpoolIdentifierLocation() {
-        CatalogueDto catalogue = catalogueService.getProducts("Liverpool-Identifier");
+        CatalogueDto catalogue = catalogueService.getCatalogue("Liverpool-Identifier");
         checkCatalogueResponse(catalogue);
         List<ProductDto> products = catalogue.getCatalogueOfProducts();
         Assert.isTrue(products.get(0).getProducts().size() == 2);
